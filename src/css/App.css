@@ -1,0 +1,145 @@
+.btn{
+    text-decoration: none;
+    color: rgb(14, 85, 97);
+    border: 1px solid rgb(14, 85, 97);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.navbar{
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.navbar p{
+    position: relative;
+    top: -10px;
+}
+
+.productList{
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+}
+
+.productCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F7EFE5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    max-width: 400px;
+}
+
+.productCard img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.productDetails{
+    text-align: center;
+}
+
+.productCard h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.productCard p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.addToCart{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 425px){
+    .productList{
+        display: grid;
+        place-items: center;
+    }
+
+    .productCard{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows:repeat(1, 1fr);
+        width: 100%;
+        gap: 20px;
+    }
+
+    .productCard img{
+        max-width: 200px;
+        grid-column: 1 / 2;
+    }
+
+    .productDetails{
+        grid-column: 2 / 3;
+    }
+
+    .addToCart{
+        grid-column: 3 / 4;
+    }
+}
+
+.loadMoreLink{
+    text-align: center;
+    margin: 20px;
+}
+
+.errorPage{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.errorPage h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.errorPage p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.checkoutPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.checkoutPage h1{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.checkoutBtn{
+    margin-bottom: 20px;
+}
