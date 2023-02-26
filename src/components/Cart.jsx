@@ -1,28 +1,9 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { DataContext } from "../App";
-import { useState } from "react";
-import { server } from "../App";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { data, cart, setCart } = useContext(DataContext);
-  const [orderPrice, setOrderPrice] = useState(0);
-
-  useEffect(()=>{
-    server.post('/cal',{
-        id: cart
-    })
-    .then(res=>{
-        setOrderPrice(res.data.totalPrice)
-    })
-    .catch(err=>console.log(err))
-  })
-
-  const removeFromCart = (id) => {
-    setCart((prev) => {
-      return prev.filter((item) => item !== id);
-    });
-  };
+  const { data, cart } = useContext(DataContext);
 
   return (
     <div style={{textAlign: "center"}}>
@@ -58,8 +39,7 @@ const Cart = () => {
               )
             );
           })}
-          <h2>Total Amount: ₹{orderPrice}</h2>
-          <Link className="btn checkoutBtn" to='/checkout' state={{orderPrice: orderPrice}}>Place Order</Link>
+          <Link className="btn checkoutBtn" to='/checkout' state={{cart}}>Place Order</Link>
         </div>
       )}
     </div>
