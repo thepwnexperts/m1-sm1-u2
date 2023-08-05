@@ -8,7 +8,7 @@ export const DataContext = createContext();
 
 export const server = axios.create({
   // baseURL: "https://m1-sm1-b1.thepwnexperts.com/",
-     baseURL: "http://localhost:3000",
+     baseURL: import.meta.env.VITE_BASE_URL,
 });
 
 
