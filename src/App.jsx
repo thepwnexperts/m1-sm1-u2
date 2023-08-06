@@ -7,7 +7,8 @@ import { Outlet } from "react-router-dom";
 export const DataContext = createContext();
 
 export const server = axios.create({
-  baseURL: "https://m1-sm1-b1.thepwnexperts.com/",
+  // baseURL: "https://m1-sm1-b1.thepwnexperts.com/",
+     baseURL: import.meta.env.VITE_BASE_URL,
 });
 
 
